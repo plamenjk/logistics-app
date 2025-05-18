@@ -1,4 +1,8 @@
+// frontend/tsconfig.json
 {
+  "compilerOptions": {
+    "strict": true
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
