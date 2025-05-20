@@ -1,0 +1,10 @@
+/* src/pages/companies.css */
+.companies-title {
+    margin-bottom: 16px;
+  }
+  .companies-grid {
+    height: 600px;
+    width: 100%;
+    margin-top: 16px;
+  }
+  

@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
-import { Package } from './Package';
+import { Package } from './package.entity';
 
 @Entity()
 export class Client {
@@ -8,13 +8,11 @@ export class Client {
 
   @Column()
   name!: string;
-
   @Column({ unique: true })
   email!: string;
 
-  @OneToMany(() => Package, pkg => pkg.sender)
+  @OneToMany(() => Package, (p) => p.sender)
   sentPackages!: Package[];
-
-  @OneToMany(() => Package, pkg => pkg.recipient)
+  @OneToMany(() => Package, (p) => p.recipient)
   receivedPackages!: Package[];
 }
